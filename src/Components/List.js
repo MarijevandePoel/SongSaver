@@ -1,13 +1,12 @@
-import React from "react";
-
 import SongItem from "./SongItem";
 
 import { useSelector } from "react-redux";
 
 const List = () => {
 	const songs = useSelector((state) => state.songs);
+
 	return (
-		<div>
+		<div className="songList">
 			<table style={{ width: "100%" }}>
 				<thead>
 					<tr className="song-header">
@@ -15,12 +14,14 @@ const List = () => {
 						<th className="song-row__item">Artist</th>
 						<th className="song-row__item">Genre</th>
 						<th className="song-row__item">Rating</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
 				<tbody>
 					{songs.map((songs) => (
 						<SongItem
 							key={songs.id}
+							id={songs.id}
 							title={songs.title}
 							artist={songs.artist}
 							genre={songs.genre}
@@ -32,4 +33,5 @@ const List = () => {
 		</div>
 	);
 };
+
 export default List;

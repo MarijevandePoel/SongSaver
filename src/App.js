@@ -2,7 +2,7 @@ import Container from "./Components/Container";
 import NavBar from "./Components/Navbar";
 import AboutUs from "./Components/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import "./App.css";
 function App() {
 	return (
 		<BrowserRouter>
@@ -15,5 +15,4 @@ function App() {
 		</BrowserRouter>
 	);
 }
-
 export default App;

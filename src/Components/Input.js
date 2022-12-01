@@ -11,7 +11,7 @@ const Input = () => {
 		event.preventDefault();
 		dispatch(
 			addSongs({
-				id: songs.id + songs.id + 1,
+				id: Date.now(),
 				title: songs.title,
 				artist: songs.artist,
 				genre: songs.genre,
@@ -19,6 +19,7 @@ const Input = () => {
 			})
 		);
 	};
+
 	const onChange = (event) => {
 		const inputName = event.target.getAttribute("name");
 		const inputValue = event.target.value;
@@ -44,12 +45,12 @@ const Input = () => {
 				/>
 				<select value={songs.genre} onChange={onChange} name="genre">
 					<option value="none">please choose a genre</option>
-					<option value="rock">Rock </option>
-					<option value="pop">Pop </option>
+					<option value="Rock">Rock </option>
+					<option value="Pop">Pop </option>
 					<option value="R&B">R&B </option>
-					<option value="rap">Rap</option>
+					<option value="Rap">Rap</option>
 					<option value="Latin">Latin</option>
-					<option value="soundtrack">Soundtrack</option>
+					<option value="Soundtrack">Soundtrack</option>
 				</select>
 				<select value={songs.rating} onChange={onChange} name="rating">
 					<option value="none">Please choose a rating</option>

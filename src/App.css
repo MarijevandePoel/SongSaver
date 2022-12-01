@@ -1,9 +1,135 @@
+*{
+  box-sizing: border-box;
+  padding: 0
+}
+
 .App {
   display: flex;
   align-items: center;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;  
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
 .NavBar {
   display: flex;
+ 
+  background-color: #28aefc;
+  color: whitesmoke;
+  font-size: 16px;
+
+}
+
+.NavBar ul{
+  display: flex;
+  list-style-type: none;
+  margin: 20 px
+  ;
+  
+  
+}
+.NavBar li {
+  display: flex;
+  padding: 5px;
+  align-self: right;
+}
+.NavBar :link {
+  display: flex;
+  padding: 5px;
+  text-decoration: none;
+ color:whitesmoke; 
+}
+.NavBar :hover {
+  color: whitesmoke;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 8px;
+  font-size: 20px;
+  
+  background-color: #65c3fa;
+}
+.song-header{
+  background-color: #87b5cf ;
+}
+
+.songRow {  
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 8px;
+  font-size: 20px;
+  background-color: #75c9fa;
+}
+
+table tr:nth-child(even) {
+  background-color: #dfeefc;
+}
+
+.footer{
+  padding-left: 3%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #28aefc;
+  color: whitesmoke;
+  
+
+}
+
+button {
+  align-items: center;
+  border: 1px;
+  border-color: white; 
+  border-radius: 15px;
+  background: white;
+  color: #0085d3; 
+    width: 60px;
+    height: 30px;
+
+  }
+button:hover{
+background-color: #0085d3; 
+color: white; 
+  }
+
+.submit {
+  align-items: center;
+  border: 1px;
+  border-color: white; 
+  border-radius: 15px;
+  background: white;
+  color: #0085d3; 
+    width: 60px;
+    height: 25px;
+}
+
+.submit:hover {
+  background-color: #0085d3; 
+color: white; 
+  }
+
+.aboutUs {
+  margin-left: 200px;
+  width: 500px;
+  height: 250px;
+  background:#65c3fa;
+  color: white; 
+  box-shadow: 10px 10px 5px lightblue;
+}
+.aboutUs p{
+  padding: 5px;
 }
 

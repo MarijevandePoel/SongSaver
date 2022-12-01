@@ -2,8 +2,8 @@ import { Outlet, Link } from "react-router-dom";
 
 function NavBar() {
 	return (
-		<div className="NavBar">
-			<nav>
+		<div>
+			<nav className="NavBar">
 				<ul>
 					<li>
 						<Link to="/">Home</Link>

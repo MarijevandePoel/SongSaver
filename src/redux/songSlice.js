@@ -28,7 +28,7 @@ const songSlice = createSlice({
 	reducers: {
 		addSongs: (state, action) => {
 			const newSong = {
-				id: action.payload.id + action.payload.id + 1,
+				id: action.payload.id,
 				title: action.payload.title,
 				artist: action.payload.artist,
 				genre: action.payload.genre,
@@ -42,9 +42,16 @@ const songSlice = createSlice({
 
 			return newSongs.filter((songs) => songs.id !== action.payload.id);
 		},
+
+		sortSong: (songs, action) => {
+			const sortSongs = songs.sort(function (a, b) {
+				return a - b;
+			});
+			return sortSongs.action.payload;
+		},
 	},
 });
 
-export const { addSongs, deleteSong } = songSlice.actions;
+export const { addSongs, deleteSong, sortSong } = songSlice.actions;
 
 export default songSlice.reducer;
