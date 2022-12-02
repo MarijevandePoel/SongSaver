@@ -42,16 +42,9 @@ const songSlice = createSlice({
 
 			return newSongs.filter((songs) => songs.id !== action.payload.id);
 		},
-
-		sortSong: (songs, action) => {
-			const sortSongs = songs.sort(function (a, b) {
-				return a - b;
-			});
-			return sortSongs.action.payload;
-		},
 	},
 });
 
-export const { addSongs, deleteSong, sortSong } = songSlice.actions;
+export const { addSongs, deleteSong } = songSlice.actions;
 
 export default songSlice.reducer;
